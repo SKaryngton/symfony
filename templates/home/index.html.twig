@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for track in tracks %}
+            <li>
+                {{ track.song | u.truncate(5,'...') }} - {{ track.artist }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
